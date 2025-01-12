@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تطبيق جوالك وين لعرض وبيع المنتجات من جوالات وأيبادات وسماعات وغيرها.">
+  <title>تطبيق جوالك وين - بيع وشراء الأجهزة</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>جوالك وين</h1>
+
+    <!-- تسجيل حساب جديد -->
+    <div id="register-section">
+      <h2>تسجيل حساب جديد</h2>
+      <form id="register-form">
+        <input type="text" id="username" placeholder="اسم المستخدم" required>
+        <input type="password" id="password" placeholder="كلمة المرور" required>
+        <button type="submit">تسجيل</button>
+      </form>
+    </div>
+
+    <!-- تسجيل الدخول -->
+    <div id="login-section" style="display: none;">
+      <h2>تسجيل الدخول</h2>
+      <form id="login-form">
+        <input type="text" id="login-username" placeholder="اسم المستخدم" required>
+        <input type="password" id="login-password" placeholder="كلمة المرور" required>
+        <button type="submit">دخول</button>
+      </form>
+    </div>
+
+    <!-- لوحة البائع -->
+    <div id="seller-section" style="display: none;">
+      <h2>مرحبًا <span id="seller-name"></span>!</h2>
+      <h3>إضافة منتج جديد</h3>
+      <form id="add-product-form">
+        <input type="text" id="product-name" placeholder="اسم المنتج" required>
+        <input type="number" id="product-price" placeholder="السعر" required>
+        <input type="text" id="product-location" placeholder="الموقع" required>
+        <select id="product-category" required>
+          <option value="">اختر القسم</option>
+          <option value="جوالات">جوالات</option>
+          <option value="أيبادات">أيبادات</option>
+          <option value="سماعات">سماعات</option>
+          <option value="شواحن">شواحن</option>
+          <option value="غلافات">غلافات</option>
+          <option value="كمبيوترات">كمبيوترات</option>
+        </select>
+        <button type="submit">إضافة</button>
+      </form>
+
+      <h3>قائمة المنتجات</h3>
+      <div id="product-categories">
+        <button data-category="all">كل المنتجات</button>
+        <button data-category="جوالات">جوالات</button>
+        <button data-category="أيبادات">أيبادات</button>
+        <button data-category="سماعات">سماعات</button>
+        <button data-category="شواحن">شواحن</button>
+        <button data-category="غلافات">غلافات</button>
+        <button data-category="كمبيوترات">كمبيوترات</button>
+      </div>
+      <ul id="product-list"></ul>
+      <button id="logout">تسجيل الخروج</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
